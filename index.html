@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* === UPDATED COLOR PALETTE (Subtle Blue Background) === */
         :root {
             --primary-color: #5A67D8;    /* Indigo */
             --secondary-color: #38B2AC;  /* Teal */
@@ -15,15 +14,12 @@
             --dark-color: #2D3748;    /* Dark Gray-Blue */
             --light-color: #EAF1F8;   /* Very Light Soft Blue */
             --gray-color: #718096;   /* Medium Gray-Blue */
-
-            /* --- Other variables (no changes) --- */
             --success-color: #28A745;
             --danger-color: #DC3545;
             --border-radius: 12px;
             --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
-        /* === END UPDATED PALETTE === */
 
         * {
             margin: 0;
@@ -33,7 +29,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--light-color); /* Applied the new light blue */
+            background-color: var(--light-color);
             color: var(--dark-color);
             line-height: 1.6;
         }
@@ -171,7 +167,6 @@
 
         /* Hero Section */
         .hero {
-            /* Using primary and secondary colors for gradient */
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 60px 0;
@@ -209,7 +204,7 @@
             border: none;
             font-size: 1rem;
             outline: none;
-            color: var(--dark-color); /* Ensure input text is visible */
+            color: var(--dark-color);
         }
 
         .search-box button {
@@ -222,7 +217,7 @@
         }
 
         .search-box button:hover {
-            background-color: #4C51BF; /* Darker Indigo */
+            background-color: #4C51BF;
         }
 
         /* Main Content */
@@ -235,7 +230,7 @@
         /* Sidebar */
         .sidebar {
             flex: 0 0 250px;
-            background-color: white; /* Keep sidebar white for contrast */
+            background-color: white; /* Keep sidebar white */
             border-radius: var(--border-radius);
             padding: 25px;
             box-shadow: var(--box-shadow);
@@ -272,7 +267,7 @@
             margin-right: 10px;
             width: 18px;
             height: 18px;
-            accent-color: var(--primary-color); /* Checkbox color */
+            accent-color: var(--primary-color);
         }
 
         .filter-option label {
@@ -360,7 +355,7 @@
 
         .offer-card.clickable:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(45, 55, 72, 0.15); /* Use dark color for shadow */
+            box-shadow: 0 10px 20px rgba(45, 55, 72, 0.15);
             cursor: pointer;
         }
 
@@ -368,7 +363,7 @@
             height: 180px;
             width: 100%;
             object-fit: cover;
-            background-color: #eee; /* Placeholder bg */
+            background-color: #eee;
         }
 
         .offer-content {
@@ -378,7 +373,7 @@
         .offer-category {
             display: inline-block;
             background-color: var(--accent-color);
-            color: var(--dark-color); /* Dark text on yellow */
+            color: var(--dark-color);
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -418,7 +413,7 @@
 
         .offer-location i {
             margin-right: 5px;
-            color: var(--secondary-color); /* Teal icon */
+            color: var(--secondary-color);
         }
 
         .offer-expiry {
@@ -428,7 +423,7 @@
 
         .offer-expiry i {
             margin-right: 5px;
-            color: var(--primary-color); /* Indigo icon */
+            color: var(--primary-color);
         }
 
         /* Modal Styles */
@@ -439,7 +434,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(45, 55, 72, 0.6); /* Darker overlay */
+            background-color: rgba(45, 55, 72, 0.6);
             z-index: 1000;
             overflow-y: auto;
         }
@@ -496,7 +491,7 @@
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px; }
         .footer-section h3 { font-size: 1.2rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; color: white; }
         .footer-section h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 50px; height: 2px; background-color: var(--primary-color); }
-        .footer-section ul { list-style: none; }
+        .footer-section ul { list-style: none; padding-left: 0; /* Remove default padding */ }
         .footer-section ul li { margin-bottom: 10px; }
         .footer-section ul li a { color: #A0AEC0; text-decoration: none; transition: var(--transition); }
         .footer-section ul li a:hover { color: var(--primary-color); }
@@ -591,7 +586,7 @@
 
 <div class="modal" id="offerModal"><div class="modal-content"><span class="close-modal" id="closeModal">&times;</span><div id="offerDetails"></div></div></div>
 
-<div class="modal" id="postOfferModal"><div class="modal-content"><span class="close-modal" id="closePostModal">&times;</span><h2 id="postOfferModalTitle">Post Your Offer</h2><form id="postOfferForm" enctype="multipart/form-data"><input type="hidden" id="editOfferId"><div class="form-group"><label for="shopName">Shop Name</label><input type="text" class="form-control" id="shopName" required></div><div class="form-group"><label for="category">Offer Category</label><select class="form-control" id="category" required><option value="">Select a category</option></select></div><div class="form-group"><label for="offerTitle">Offer Title</label><input type="text" class="form-control" id="offerTitle" required></div><div class="form-group"><label for="offerDescription">Offer Description</label><textarea class="form-control" id="offerDescription" required></textarea></div><div class="form-group"><label for="location">Location/Area</label><input type="text" class="form-control" id="location" required></div><div class="form-row"><div class="form-group"><label for="startDate">Start Date</label><input type="date" class="form-control" id="startDate" required></div><div class="form-group"><label for="endDate">End Date</label><input type="date" class="form-control" id="endDate" required></div></div><div class="form-group"><label for="contactInfo">Contact Information</label><input type="text" class="form-control" id="contactInfo" required></div><div class="form-group"><label for="offerImage">Offer Image (optional)</label><input type="file" class="form-control" id="offerImage" name="image" accept="image/*"></div><button type="submit" class="btn btn-primary" style="width: 100%;" id="postOfferSubmitBtn">Post Offer</button></form></div></div>
+<div class="modal" id="postOfferModal"><div class="modal-content"><span class="close-modal" id="closePostModal">&times;</span><h2 id="postOfferModalTitle">Post Your Offer</h2><form id="postOfferForm" enctype="multipart/form-data"><input type="hidden" id="editOfferId"><div class="form-group"><label for="shopName">Shop Name</label><input type="text" class="form-control" id="shopName" required></div><div class="form-group"><label for="category">Offer Category</label><select class="form-control" id="category" required><option value="">Select a category</option></select></div><div class="form-group"><label for="offerTitle">Offer Title</label><input type="text" class="form-control" id="offerTitle" required></div><div class="form-group"><label for="offerDescription">Offer Description</label><textarea class="form-control" id="offerDescription" required></textarea></div><div class="form-group"><label for="location">Location/Area</label><input type="text" class="form-control" id="location" required></div><div class="form-row"><div class="form-group"><label for="startDate">Start Date</label><input type="date" class="form-control" id="startDate" name="startDate" required></div><div class="form-group"><label for="endDate">End Date</label><input type="date" class="form-control" id="endDate" name="endDate" required></div></div><div class="form-group"><label for="contactInfo">Contact Information</label><input type="text" class="form-control" id="contactInfo" required></div><div class="form-group"><label for="offerImage">Offer Image (optional)</label><input type="file" class="form-control" id="offerImage" name="image" accept="image/*"></div><button type="submit" class="btn btn-primary" style="width: 100%;" id="postOfferSubmitBtn">Post Offer</button></form></div></div>
 
 <div class="modal" id="authModal"><div class="modal-content"><span class="close-modal" id="closeAuthModal">&times;</span><div class="auth-header"><h2>Welcome to LocalBazaar</h2><p>Sign in or create a new account</p></div><div class="auth-tabs"><div class="auth-tab active" id="loginTab">Login</div><div class="auth-tab" id="signupTab">Sign Up</div></div><form class="auth-form active" id="loginForm"><div class="form-error" id="loginError" style="display: none;"></div><div class="form-group"><label for="loginEmail">Email</label><input type="email" class="form-control" id="loginEmail" required></div><div class="form-group"><label for="loginPassword">Password</label><input type="password" class="form-control" id="loginPassword" required></div><button type="submit" class="btn btn-primary" style="width: 100%;">Login</button></form><form class="auth-form" id="signupForm"><div class="form-error" id="signupError" style="display: none;"></div><div class="form-group"><label for="signupName">Shop Name</label><input type="text" class="form-control" id="signupName" required></div><div class="form-group"><label for="signupCategory">Your Shop's Main Category</label><select class="form-control" id="signupCategory" required><option value="">Select a category</option></select></div><div class="form-group"><label for="signupEmail">Email</label><input type="email" class="form-control" id="signupEmail" required></div><div class="form-group"><label for="signupPassword">Password</label><input type="password" class="form-control" id="signupPassword" required></div><div class="form-group"><label for="signupConfirmPassword">Confirm Password</label><input type="password" class="form-control" id="signupConfirmPassword" required></div><button type="submit" class="btn btn-primary" style="width: 100%;">Sign Up</button></form></div></div>
 
@@ -731,7 +726,52 @@
     applyFiltersBtn.addEventListener('click', () => { const c = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value), l = locationSelect.value, t = searchInput.value.trim(); loadOffers({ search: t, categories: c, location: l }); });
 
     // --- FORM SUBMISSIONS ---
-    postOfferForm.addEventListener('submit', async (e) => { e.preventDefault(); const t = localStorage.getItem('token'); if (!t) { showToast('Login required', 'error'); return; } const oid = editOfferId.value, m = oid ? 'PUT' : 'POST', u = oid ? `/api/offers/${oid}` : '/api/offers', fd = new FormData(postOfferForm); /* Manually set potentially disabled fields if needed */ fd.set('shopName', getEl('shopName').value); try { const r = await fetch(u, { method: m, headers: { 'Authorization': `Bearer ${t}` }, body: fd }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Submit failed'); showToast(oid ? 'Updated!' : 'Posted!', 'success'); postOfferModal.style.display = 'none'; resetPostOfferModal(); loadDashboard(); loadFilters(); } catch (err) { showToast(err.message, 'error'); } });
+    // --- UPDATED: Post / Edit Offer Form ---
+    postOfferForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const token = localStorage.getItem('token');
+        if (!token) { showToast('Login required', 'error'); return; }
+        const offerId = editOfferId.value;
+        const method = offerId ? 'PUT' : 'POST';
+        const url = offerId ? `/api/offers/${offerId}` : '/api/offers';
+
+        // Create FormData from the form element
+        const formData = new FormData(postOfferForm);
+
+        // --- EXPLICITLY SET DATES ---
+        // Ensure the date values from the inputs are correctly added/updated in FormData.
+        formData.set('startDate', getEl('startDate').value);
+        formData.set('endDate', getEl('endDate').value);
+        // --- END EXPLICIT SET ---
+
+        // Ensure other fields are correctly set (FormData usually handles this if names match IDs)
+        formData.set('shopName', getEl('shopName').value);
+        formData.set('category', getEl('category').value);
+        formData.set('title', getEl('offerTitle').value);
+        formData.set('description', getEl('offerDescription').value);
+        formData.set('location', getEl('location').value);
+        formData.set('contact', getEl('contactInfo').value);
+        // The 'image' file input is handled automatically by FormData if it has name="image"
+
+        // Optional: Log FormData for debugging
+        // console.log("--- Sending FormData ---");
+        // for (let [key, value] of formData.entries()) { console.log(key, value); }
+
+        try {
+            const response = await fetch(url, { method: method, headers: { 'Authorization': `Bearer ${token}` }, body: formData });
+            const data = await response.json();
+            if (!response.ok) throw new Error(data.message || 'Submit failed');
+            showToast(offerId ? 'Updated!' : 'Posted!', 'success');
+            postOfferModal.style.display = 'none';
+            resetPostOfferModal();
+            loadDashboard(); // Refresh dashboard
+            loadFilters(); // Refresh filters (e.g., locations)
+        } catch (err) {
+            showToast(err.message, 'error');
+        }
+    });
+    // --- END UPDATED ---
+
     getEl('loginForm').addEventListener('submit', async (e) => { e.preventDefault(); const email = getEl('loginEmail').value, pwd = getEl('loginPassword').value, le = getEl('loginError'); try { const r = await fetch('/api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, password: pwd }) }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Login failed'); localStorage.setItem('token', d.token); localStorage.setItem('user', JSON.stringify(d.user)); showToast('Login ok!', 'success'); authModal.style.display = 'none'; getEl('loginForm').reset(); le.style.display = 'none'; updateAuthState(); } catch (err) { le.textContent = err.message; le.style.display = 'block'; showToast(err.message, 'error'); } });
     getEl('signupForm').addEventListener('submit', async (e) => { e.preventDefault(); const sn = getEl('signupName').value, em = getEl('signupEmail').value, pw = getEl('signupPassword').value, cpw = getEl('signupConfirmPassword').value, cat = getEl('signupCategory').value, se = getEl('signupError'); if (pw !== cpw) { se.textContent = 'Passwords mismatch!'; se.style.display = 'block'; return; } try { const r = await fetch('/api/auth/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ shopName: sn, email: em, password: pw, category: cat }) }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Signup failed'); localStorage.setItem('token', d.token); localStorage.setItem('user', JSON.stringify(d.user)); showToast('Account created!', 'success'); authModal.style.display = 'none'; getEl('signupForm').reset(); se.style.display = 'none'; updateAuthState(); } catch (err) { se.textContent = err.message; se.style.display = 'block'; showToast(err.message, 'error'); } });
     getEl('gridViewBtn').addEventListener('click', () => { getEl('gridViewBtn').classList.add('active'); getEl('listViewBtn').classList.remove('active'); offersGrid.className = 'offers-grid'; });
