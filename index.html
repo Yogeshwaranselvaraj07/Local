@@ -7,19 +7,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* === UPDATED COLOR PALETTE (Subtle Blue Background) === */
         :root {
             --primary-color: #5A67D8;    /* Indigo */
             --secondary-color: #38B2AC;  /* Teal */
             --accent-color: #F6E05E;   /* Yellow */
             --dark-color: #2D3748;    /* Dark Gray-Blue */
-            --light-color: #F7FAFC;   /* Very Light Blue-Gray */
+            --light-color: #EAF1F8;   /* Very Light Soft Blue */
             --gray-color: #718096;   /* Medium Gray-Blue */
+
+            /* --- Other variables (no changes) --- */
             --success-color: #28A745;
             --danger-color: #DC3545;
             --border-radius: 12px;
             --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --transition: all 0.3s ease;
         }
+        /* === END UPDATED PALETTE === */
 
         * {
             margin: 0;
@@ -29,7 +33,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: var(--light-color);
+            background-color: var(--light-color); /* Applied the new light blue */
             color: var(--dark-color);
             line-height: 1.6;
         }
@@ -167,6 +171,7 @@
 
         /* Hero Section */
         .hero {
+            /* Using primary and secondary colors for gradient */
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 60px 0;
@@ -204,7 +209,7 @@
             border: none;
             font-size: 1rem;
             outline: none;
-            color: var(--dark-color);
+            color: var(--dark-color); /* Ensure input text is visible */
         }
 
         .search-box button {
@@ -217,7 +222,7 @@
         }
 
         .search-box button:hover {
-            background-color: #4C51BF;
+            background-color: #4C51BF; /* Darker Indigo */
         }
 
         /* Main Content */
@@ -230,7 +235,7 @@
         /* Sidebar */
         .sidebar {
             flex: 0 0 250px;
-            background-color: white;
+            background-color: white; /* Keep sidebar white for contrast */
             border-radius: var(--border-radius);
             padding: 25px;
             box-shadow: var(--box-shadow);
@@ -267,7 +272,7 @@
             margin-right: 10px;
             width: 18px;
             height: 18px;
-            accent-color: var(--primary-color);
+            accent-color: var(--primary-color); /* Checkbox color */
         }
 
         .filter-option label {
@@ -324,6 +329,10 @@
 
         #dashboardView {
             margin-top: 30px;
+            background-color: white; /* Optional: Give dashboard a white background */
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
         }
 
         .offer-card-actions {
@@ -342,7 +351,7 @@
         }
 
         .offer-card {
-            background-color: white;
+            background-color: white; /* Keep cards white */
             border-radius: var(--border-radius);
             overflow: hidden;
             box-shadow: var(--box-shadow);
@@ -351,7 +360,7 @@
 
         .offer-card.clickable:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(45, 55, 72, 0.15);
+            box-shadow: 0 10px 20px rgba(45, 55, 72, 0.15); /* Use dark color for shadow */
             cursor: pointer;
         }
 
@@ -359,7 +368,7 @@
             height: 180px;
             width: 100%;
             object-fit: cover;
-            background-color: #eee;
+            background-color: #eee; /* Placeholder bg */
         }
 
         .offer-content {
@@ -369,7 +378,7 @@
         .offer-category {
             display: inline-block;
             background-color: var(--accent-color);
-            color: var(--dark-color);
+            color: var(--dark-color); /* Dark text on yellow */
             padding: 5px 10px;
             border-radius: 20px;
             font-size: 0.8rem;
@@ -409,7 +418,7 @@
 
         .offer-location i {
             margin-right: 5px;
-            color: var(--secondary-color);
+            color: var(--secondary-color); /* Teal icon */
         }
 
         .offer-expiry {
@@ -419,7 +428,7 @@
 
         .offer-expiry i {
             margin-right: 5px;
-            color: var(--primary-color);
+            color: var(--primary-color); /* Indigo icon */
         }
 
         /* Modal Styles */
@@ -430,7 +439,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(45, 55, 72, 0.6);
+            background-color: rgba(45, 55, 72, 0.6); /* Darker overlay */
             z-index: 1000;
             overflow-y: auto;
         }
@@ -594,7 +603,7 @@
             <div class="footer-section"><h3>About LocalBazaar</h3><p>Connecting local shops with customers.</p><div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
             <div class="footer-section"><h3>Quick Links</h3><ul><li><a href="#">Home</a></li><li><a href="#">All Offers</a></li><li><a href="#">Categories</a></li><li><a href="#">Locations</a></li><li><a href="#">Post Offer</a></li></ul></div>
             <div class="footer-section"><h3>Support</h3><ul><li><a href="#">Help Center</a></li><li><a href="#">Contact Us</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">FAQ</a></li></ul></div>
-            <div class="footer-section"><h3>Contact Info</h3><ul><li><i class="fas fa-map-marker-alt"></i> 8/22,Municipal Office, Azad Road, Karur – 639000</li><li><i class="fas fa-phone"></i> +91 9159315060</li><li><i class="fas fa-envelope"></i> info@localbazaar.com</li></ul></div>
+            <div class="footer-section"><h3>Contact Info</h3><ul><li><i class="fas fa-map-marker-alt"></i> 123 Main St, Karur</li><li><i class="fas fa-phone"></i> +91 98765 43210</li><li><i class="fas fa-envelope"></i> info@localbazaar.com</li></ul></div>
         </div>
         <div class="footer-bottom"><p>&copy; 2025 LocalBazaar. All Rights Reserved.</p></div>
     </div>
@@ -632,12 +641,78 @@
     async function loadFilters() {
         try { const [cr, lr] = await Promise.all([fetch('/api/categories'), fetch('/api/locations')]); const c = await cr.json(), l = await lr.json(); categoryFilterGroup.innerHTML = '<h4>Categories</h4>'; c.forEach(cat => categoryFilterGroup.innerHTML += `<div class="filter-option"><input type="checkbox" id="cat-${cat}" class="category-filter" value="${cat}"><label for="cat-${cat}">${cat}</label></div>`); locationSelect.innerHTML = '<option value="">All Locations</option>'; l.forEach(loc => locationSelect.innerHTML += `<option value="${loc}">${loc}</option>`); postOfferCategorySelect.innerHTML = '<option value="">Select category</option>'; const signupCatSelect = getEl('signupCategory'); signupCatSelect.innerHTML = '<option value="">Select category</option>'; c.forEach(cat => { postOfferCategorySelect.innerHTML += `<option value="${cat}">${cat}</option>`; signupCatSelect.innerHTML += `<option value="${cat}">${cat}</option>`; }); } catch (e) { console.error('Load filters:', e); }
     }
-    function renderOffers(offers) { offersGrid.innerHTML = ''; offers.forEach(o => { const c = document.createElement('div'); c.className = 'offer-card clickable'; const i = o.image ? `/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`; c.innerHTML = `<img src="${i}" alt="${o.title}" class="offer-image"><div class="offer-content"><span class="offer-category">${o.category}</span><h3 class="offer-title">${o.title}</h3><p class="offer-description">${o.description}</p><div class="offer-meta"><span class="offer-location"><i class="fas fa-map-marker-alt"></i> ${o.location}</span><span class="offer-expiry"><i class="fas fa-clock"></i> Ends: ${formatDate(o.endDate)}</span></div></div>`; c.addEventListener('click', () => showOfferDetails(o)); offersGrid.appendChild(c); }); }
-    async function showOfferDetails(o) { const d = getEl('offerDetails'), i = o.image ? `/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`, s = o.User ? o.User.shopName : o.shopName; d.innerHTML = `<img src="${i}" alt="${o.title}" style="width:100%;height:300px;object-fit:cover;border-radius:var(--border-radius);margin-bottom:20px;"><span class="offer-category">${o.category}</span><h2 style="margin:15px 0;color:var(--dark-color);">${o.title}</h2><p style="margin-bottom:20px;color:var(--gray-color);">${o.description}</p><div style="background-color:var(--light-color);padding:20px;border-radius:var(--border-radius);margin-bottom:20px;"><h3 style="margin-bottom:15px;color:var(--dark-color);">Shop Info</h3><p><strong>Shop:</strong> ${s}</p><p><strong>Location:</strong> ${o.location}</p><p><strong>Contact:</strong> ${o.contact}</p><p><strong>Valid:</strong> ${formatDate(o.startDate)} to ${formatDate(o.endDate)}</p></div><div style="text-align:center;color:var(--gray-color);font-size:.9rem;"><i class="fas fa-eye"></i> ${o.views} views</div>`; offerModal.style.display = 'block'; try { await fetch(`/api/offers/${o.id}`); o.views++; d.querySelector('.fa-eye').parentElement.innerHTML = `<i class="fas fa-eye"></i> ${o.views} views`; } catch (e) { console.error('Update view count:', e); } }
+    function renderOffers(offers) { // Renders offers for the main page
+        offersGrid.innerHTML = '';
+        offers.forEach(o => {
+            const c = document.createElement('div');
+            c.className = 'offer-card clickable';
+            // === IMAGE URL FIX ===
+            const imageUrl = o.image ? `${window.location.origin}/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`;
+            // === END FIX ===
+            c.innerHTML = `<img src="${imageUrl}" alt="${o.title}" class="offer-image" onerror="this.onerror=null; this.src='https://picsum.photos/seed/${o.id}/400/300.jpg';"> <div class="offer-content">
+                               <span class="offer-category">${o.category}</span>
+                               <h3 class="offer-title">${o.title}</h3>
+                               <p class="offer-description">${o.description}</p>
+                               <div class="offer-meta">
+                                   <span class="offer-location"><i class="fas fa-map-marker-alt"></i> ${o.location}</span>
+                                   <span class="offer-expiry"><i class="fas fa-clock"></i> Ends: ${formatDate(o.endDate)}</span>
+                               </div>
+                           </div>`;
+            c.addEventListener('click', () => showOfferDetails(o));
+            offersGrid.appendChild(c);
+        });
+    }
+    async function showOfferDetails(o) { // Shows details in the modal
+        const d = getEl('offerDetails');
+        // === IMAGE URL FIX ===
+        const imageUrl = o.image ? `${window.location.origin}/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`;
+        // === END FIX ===
+        const s = o.User ? o.User.shopName : o.shopName;
+        d.innerHTML = `<img src="${imageUrl}" alt="${o.title}" style="width:100%;height:300px;object-fit:cover;border-radius:var(--border-radius);margin-bottom:20px;" onerror="this.onerror=null; this.src='https://picsum.photos/seed/${o.id}/400/300.jpg';"> <span class="offer-category">${o.category}</span>
+                       <h2 style="margin:15px 0;color:var(--dark-color);">${o.title}</h2>
+                       <p style="margin-bottom:20px;color:var(--gray-color);">${o.description}</p>
+                       <div style="background-color: var(--light-color); padding: 20px; border-radius: var(--border-radius); margin-bottom: 20px;">
+                           <h3 style="margin-bottom:15px;color:var(--dark-color);">Shop Info</h3>
+                           <p><strong>Shop:</strong> ${s}</p>
+                           <p><strong>Location:</strong> ${o.location}</p>
+                           <p><strong>Contact:</strong> ${o.contact}</p>
+                           <p><strong>Valid:</strong> ${formatDate(o.startDate)} to ${formatDate(o.endDate)}</p>
+                       </div>
+                       <div style="text-align:center;color:var(--gray-color);font-size:.9rem;"><i class="fas fa-eye"></i> ${o.views} views</div>`;
+        offerModal.style.display = 'block';
+        try { // Increment view count
+            await fetch(`/api/offers/${o.id}`); o.views++;
+            d.querySelector('.fa-eye').parentElement.innerHTML = `<i class="fas fa-eye"></i> ${o.views} views`;
+        } catch (e) { console.error('Update view count:', e); }
+    }
 
     // --- DASHBOARD FUNCTIONS ---
     async function loadDashboard() { dashboardLoadingSpinner.style.display = 'block'; dashboardOffersGrid.innerHTML = ''; dashboardEmptyState.style.display = 'none'; const t = localStorage.getItem('token'); if (!t) { showToast('Please login', 'error'); showView('home'); return; } try { const r = await fetch('/api/user/offers', { headers: { 'Authorization': `Bearer ${t}` } }); if (!r.ok) throw new Error('Failed fetch'); const o = await r.json(); dashboardLoadingSpinner.style.display = 'none'; if (o.length === 0) dashboardEmptyState.style.display = 'block'; else renderDashboardOffers(o); } catch (e) { dashboardLoadingSpinner.style.display = 'none'; showToast(e.message, 'error'); } }
-    function renderDashboardOffers(offers) { dashboardOffersGrid.innerHTML = ''; offers.forEach(o => { const c = document.createElement('div'); c.className = 'offer-card'; const i = o.image ? `/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`; const os = JSON.stringify(o).replace(/'/g, "&apos;"); c.innerHTML = `<img src="${i}" alt="${o.title}" class="offer-image"><div class="offer-content"><span class="offer-category">${o.category}</span><h3 class="offer-title">${o.title}</h3><p class="offer-description">${o.description}</p><div class="offer-meta"><span class="offer-location"><i class="fas fa-map-marker-alt"></i> ${o.location}</span><span class="offer-expiry"><i class="fas fa-eye"></i> ${o.views} views</span></div></div><div class="offer-card-actions"><button class="btn btn-secondary" onclick='handleEditOffer(${os})'><i class="fas fa-edit"></i> Edit</button><button class="btn btn-danger" onclick="handleDeleteOffer('${o.id}')"><i class="fas fa-trash"></i> Delete</button></div>`; dashboardOffersGrid.appendChild(c); }); }
+    function renderDashboardOffers(offers) { // Renders offers for the dashboard
+        dashboardOffersGrid.innerHTML = '';
+        offers.forEach(o => {
+            const c = document.createElement('div');
+            c.className = 'offer-card';
+             // === IMAGE URL FIX ===
+            const imageUrl = o.image ? `${window.location.origin}/uploads/${o.image}` : `https://picsum.photos/seed/${o.id}/400/300.jpg`;
+             // === END FIX ===
+            const os = JSON.stringify(o).replace(/'/g, "&apos;"); // Escape quotes for onclick attribute
+            c.innerHTML = `<img src="${imageUrl}" alt="${o.title}" class="offer-image" onerror="this.onerror=null; this.src='https://picsum.photos/seed/${o.id}/400/300.jpg';"> <div class="offer-content">
+                               <span class="offer-category">${o.category}</span>
+                               <h3 class="offer-title">${o.title}</h3>
+                               <p class="offer-description">${o.description}</p>
+                               <div class="offer-meta">
+                                   <span class="offer-location"><i class="fas fa-map-marker-alt"></i> ${o.location}</span>
+                                   <span class="offer-expiry"><i class="fas fa-eye"></i> ${o.views} views</span>
+                               </div>
+                           </div>
+                           <div class="offer-card-actions">
+                               <button class="btn btn-secondary" onclick='handleEditOffer(${os})'><i class="fas fa-edit"></i> Edit</button>
+                               <button class="btn btn-danger" onclick="handleDeleteOffer('${o.id}')"><i class="fas fa-trash"></i> Delete</button>
+                           </div>`;
+            dashboardOffersGrid.appendChild(c);
+        });
+    }
     function handleEditOffer(o) { resetPostOfferModal(); postOfferModalTitle.textContent = 'Update Offer'; postOfferSubmitBtn.textContent = 'Update Offer'; editOfferId.value = o.id; getEl('shopName').value = o.shopName; getEl('category').value = o.category; getEl('offerTitle').value = o.title; getEl('offerDescription').value = o.description; getEl('location').value = o.location; getEl('startDate').value = formatDateForInput(o.startDate); getEl('endDate').value = formatDateForInput(o.endDate); getEl('contactInfo').value = o.contact; postOfferModal.style.display = 'block'; }
     async function handleDeleteOffer(id) { if (!confirm('Delete offer?')) return; const t = localStorage.getItem('token'); try { const r = await fetch(`/api/offers/${id}`, { method: 'DELETE', headers: { 'Authorization': `Bearer ${t}` } }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Failed delete'); showToast('Offer deleted!', 'success'); loadDashboard(); } catch (e) { showToast(e.message, 'error'); } }
     function resetPostOfferModal() { postOfferForm.reset(); editOfferId.value = ''; postOfferModalTitle.textContent = 'Post Offer'; postOfferSubmitBtn.textContent = 'Post Offer'; const u = JSON.parse(localStorage.getItem('user')); if (u) getEl('shopName').value = u.shopName; }
@@ -656,7 +731,7 @@
     applyFiltersBtn.addEventListener('click', () => { const c = Array.from(document.querySelectorAll('.category-filter:checked')).map(cb => cb.value), l = locationSelect.value, t = searchInput.value.trim(); loadOffers({ search: t, categories: c, location: l }); });
 
     // --- FORM SUBMISSIONS ---
-    postOfferForm.addEventListener('submit', async (e) => { e.preventDefault(); const t = localStorage.getItem('token'); if (!t) { showToast('Login required', 'error'); return; } const oid = editOfferId.value, m = oid ? 'PUT' : 'POST', u = oid ? `/api/offers/${oid}` : '/api/offers', fd = new FormData(postOfferForm); fd.set('shopName', getEl('shopName').value); fd.set('category', getEl('category').value); fd.set('title', getEl('offerTitle').value); fd.set('description', getEl('offerDescription').value); fd.set('location', getEl('location').value); fd.set('startDate', getEl('startDate').value); fd.set('endDate', getEl('endDate').value); fd.set('contact', getEl('contactInfo').value); try { const r = await fetch(u, { method: m, headers: { 'Authorization': `Bearer ${t}` }, body: fd }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Submit failed'); showToast(oid ? 'Updated!' : 'Posted!', 'success'); postOfferModal.style.display = 'none'; resetPostOfferModal(); loadDashboard(); loadFilters(); } catch (err) { showToast(err.message, 'error'); } });
+    postOfferForm.addEventListener('submit', async (e) => { e.preventDefault(); const t = localStorage.getItem('token'); if (!t) { showToast('Login required', 'error'); return; } const oid = editOfferId.value, m = oid ? 'PUT' : 'POST', u = oid ? `/api/offers/${oid}` : '/api/offers', fd = new FormData(postOfferForm); /* Manually set potentially disabled fields if needed */ fd.set('shopName', getEl('shopName').value); try { const r = await fetch(u, { method: m, headers: { 'Authorization': `Bearer ${t}` }, body: fd }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Submit failed'); showToast(oid ? 'Updated!' : 'Posted!', 'success'); postOfferModal.style.display = 'none'; resetPostOfferModal(); loadDashboard(); loadFilters(); } catch (err) { showToast(err.message, 'error'); } });
     getEl('loginForm').addEventListener('submit', async (e) => { e.preventDefault(); const email = getEl('loginEmail').value, pwd = getEl('loginPassword').value, le = getEl('loginError'); try { const r = await fetch('/api/auth/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: email, password: pwd }) }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Login failed'); localStorage.setItem('token', d.token); localStorage.setItem('user', JSON.stringify(d.user)); showToast('Login ok!', 'success'); authModal.style.display = 'none'; getEl('loginForm').reset(); le.style.display = 'none'; updateAuthState(); } catch (err) { le.textContent = err.message; le.style.display = 'block'; showToast(err.message, 'error'); } });
     getEl('signupForm').addEventListener('submit', async (e) => { e.preventDefault(); const sn = getEl('signupName').value, em = getEl('signupEmail').value, pw = getEl('signupPassword').value, cpw = getEl('signupConfirmPassword').value, cat = getEl('signupCategory').value, se = getEl('signupError'); if (pw !== cpw) { se.textContent = 'Passwords mismatch!'; se.style.display = 'block'; return; } try { const r = await fetch('/api/auth/register', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ shopName: sn, email: em, password: pw, category: cat }) }); const d = await r.json(); if (!r.ok) throw new Error(d.message || 'Signup failed'); localStorage.setItem('token', d.token); localStorage.setItem('user', JSON.stringify(d.user)); showToast('Account created!', 'success'); authModal.style.display = 'none'; getEl('signupForm').reset(); se.style.display = 'none'; updateAuthState(); } catch (err) { se.textContent = err.message; se.style.display = 'block'; showToast(err.message, 'error'); } });
     getEl('gridViewBtn').addEventListener('click', () => { getEl('gridViewBtn').classList.add('active'); getEl('listViewBtn').classList.remove('active'); offersGrid.className = 'offers-grid'; });
